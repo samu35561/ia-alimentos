@@ -9,7 +9,7 @@ st.write("Saca una foto o sube una imagen para calcular sus días estimados.")
 
 @st.cache_resource
 def cargar_modelo():
-    return tf.keras.models.load_model('modelo_frutas_v1.keras')
+  return tf.keras.models.load_model('modelo_frutas_v1.keras', compile=False)
 
 modelo = cargar_modelo()
 clases = ['apple', 'lettuce', 'pineapple', 'potato', 'strawberry', 'tomato']
